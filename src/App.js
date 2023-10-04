@@ -12,7 +12,6 @@ export default function App() {
   const [cart,setCart]=useState([]);
 
   const addToCart=(item)=>{
-    
     const itemAlreadyInCart = cart.find((cartItem) => cartItem.id === item.id);
     if (itemAlreadyInCart) {
       // If the item is already in the cart, increase its quantity

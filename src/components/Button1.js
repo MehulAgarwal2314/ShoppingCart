@@ -15,36 +15,17 @@
     MDBRow,
     MDBTypography,
   } from "mdb-react-ui-kit";  
-  import { PRODUCTS } from "./Asliproducts";
   import { useState } from "react";
   import { Button, Modal } from "react-bootstrap";
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
   export default function Button1({
     cart,
     removeFromCart,
     decreaseQuantity,
     increaseQuantity,
-    handleQuantityChange,
-    quantity
   }) {
-    let [num, setNum] = useState(0);
-    let incNum = () => {
-      if (num < 10) {
-        setNum(Number(num) + 1);
-      }
-    };
-    let decNum = () => {
-      if (num > 0) {
-        setNum(num - 1);
-      }
-    };
-
-    let handleChange = (e) => {
-      setNum(e.target.value);
-    };
+ 
     const [showModal, setShowModal] = useState(false);
-
   const handleClose = () => {
     setShowModal(false);
   };
@@ -170,11 +151,9 @@
                               <button
                                 class="btn btn-outline-primary"
                                 type="button"
-                                // onClick={increaseQuantity}
                                 onClick={() => increaseQuantity(PRODUCT)}
                                 style={{position:"relative",left:"-12px",background:"black",border:"1px solid black",color:"white"}}
-                              >
-                                {/* <FontAwesomeIcon icon="fa-thin fa-plus" size="sm" /> */}+
+                              >+
                               </button>
                             </div>
                           </div>
